@@ -1,4 +1,5 @@
 from datetime import date
+import math
 
 
 print("##############Bienvenido!##############\n")
@@ -47,10 +48,12 @@ if opcion == 6:
 
     print(f"La llanta da {round(vueltas)} vueltas en 1KM")
 if opcion == 7:
-    angulo = 35
-    sombra = 120/angulo
+   cateto = 20
+   angulo = math.radians(22)
+   tangente = math.tan(angulo)
+   cateto_adyacente = cateto/tangente
 
-    print(sombra)
+   print(f"La longitud de la sombra es : {round(cateto_adyacente)}")
 
 if opcion == 8:
     persona1 = int(input("Ingrese la edad de la persona #1: \n"))
